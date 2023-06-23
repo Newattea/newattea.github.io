@@ -11,6 +11,18 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      color: #4F4F4F;
+    }
+
+    /* 링크 스타일링 */
+    a {
+      color: #4F4F4F;
+      text-decoration: none;
+    }
+
+    /* 링크에 마우스를 올렸을 때 스타일링 */
+    a:hover {
+      text-decoration: underline;
     }
 
     /* 로고 스타일링 */
@@ -35,7 +47,7 @@
       float: left;
       padding: 20px;
       border-radius: 10px;
-      display: block;
+      display: none;
     }
 
     /* 문서 내용 스타일링 */
@@ -96,8 +108,9 @@
     <!-- 문서 내용 -->
     <h1>대문</h1>
     <p>유니보드 위키에 오신 것을 환영합니다!</p>
-    <a href="https://newattea.github.io"></a>
   </div>
+
+  <button class="toggle-button" onclick="toggleSidebar()">사이드바 표시</button>
 
   <script>
     // 모바일에서만 사이드바 토글 버튼 동작
@@ -105,9 +118,6 @@
       var sidebar = document.querySelector('.sidebar');
       sidebar.style.display = (sidebar.style.display === 'none') ? 'block' : 'none';
     }
-
-    var toggleButton = document.querySelector('.toggle-button');
-    toggleButton.addEventListener('click', toggleSidebar);
   </script>
 </body>
 </html>
