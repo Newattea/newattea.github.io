@@ -54,7 +54,6 @@
         width: 100%;
         float: none;
         padding: 10px;
-        display: none;
       }
       .content {
         margin-left: 10px;
@@ -74,12 +73,10 @@
   <script>
     function toggleSidebar() {
       var sidebar = document.getElementById("sidebar");
-      if (window.matchMedia("(max-width: 600px)").matches) {
-        if (sidebar.style.display === "block") {
-          sidebar.style.display = "none";
-        } else {
-          sidebar.style.display = "block";
-        }
+      if (sidebar.style.display === "block") {
+        sidebar.style.display = "none";
+      } else {
+        sidebar.style.display = "block";
       }
     }
   </script>
@@ -92,12 +89,9 @@
   <div class="toolbar">
     <!-- 툴바 내용 -->
     <a href="https://raw.githubusercontent.com/Newattea/newattea.github.io/main/index.htm">원본 보기</a>
-    <div class="show-sidebar">
-      <button class="mobile-only" onclick="toggleSidebar()">사이드바 표시</button>
-    </div>
   </div>
 
-  <div id="sidebar" class="sidebar">
+  <div class="sidebar">
     <!-- 사이드바 내용 -->
     <h3>둘러보기</h3>
     <p><a href="https://newattea.github.io">대문</a></p>
@@ -114,5 +108,8 @@
     <p>유니보드 위키에 오신 것을 환영합니다!</p>
     <a href="https://newattea.github.io"></a>
   </div>
+
+  <button class="show-sidebar" onclick="toggleSidebar()">사이드바 표시</button>
+
 </body>
 </html>
