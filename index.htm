@@ -35,6 +35,7 @@
       float: left;
       padding: 20px;
       border-radius: 10px;
+      display: none;
     }
 
     /* 문서 내용 스타일링 */
@@ -53,10 +54,16 @@
         width: 100%;
         float: none;
         padding: 10px;
+        display: none;
       }
       .content {
         margin-left: 10px;
         margin-right: 10px;
+      }
+      .show-sidebar {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
       }
     }
 
@@ -64,6 +71,16 @@
       text-decoration-line: none;
     }
   </style>
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      if (sidebar.style.display === "block") {
+        sidebar.style.display = "none";
+      } else {
+        sidebar.style.display = "block";
+      }
+    }
+  </script>
 </head>
 <body link="#4F4F4F" vlink="#4F4F4F" alink="#C4C4C4">
   <div class="logo">
@@ -73,18 +90,17 @@
   <div class="toolbar">
     <!-- 툴바 내용 -->
     <a href="https://raw.githubusercontent.com/Newattea/newattea.github.io/main/index.htm">원본 보기</a>
+    <div class="show-sidebar">
+      <button onclick="toggleSidebar()">사이드바 표시</button>
+    </div>
   </div>
 
-  <div class="sidebar">
+  <div id="sidebar" class="sidebar">
     <!-- 사이드바 내용 -->
-    <h3>
-      둘러보기
-    </h3>
+    <h3>둘러보기</h3>
     <p><a href="https://newattea.github.io">대문</a></p>
     <p><a href="https://newattea.github.io/모든_문서_목록/index.htm">모든 문서 목록</a></p>
-    <h3>
-      New at tea 위키 서비스
-    </h3>
+    <h3>New at tea 위키 서비스</h3>
     <p><a href="https://ootchampedia.miraheze.org">웃참위키</a></p>
     <p><a href="https://numiparin.miraheze.org">누미파린 위키</a></p>
     <p><a href="https://ootchamtest.miraheze.org">웃참위키 시험판</a></p>
@@ -96,7 +112,6 @@
     <p>유니보드 위키에 오신 것을 환영합니다!</p>
     <a href="https://newattea.github.io"></a>
   </div>
-
 
 </body>
 </html>
