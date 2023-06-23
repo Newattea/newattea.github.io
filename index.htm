@@ -74,10 +74,12 @@
   <script>
     function toggleSidebar() {
       var sidebar = document.getElementById("sidebar");
-      if (sidebar.style.display === "block") {
-        sidebar.style.display = "none";
-      } else {
-        sidebar.style.display = "block";
+      if (window.matchMedia("(max-width: 600px)").matches) {
+        if (sidebar.style.display === "block") {
+          sidebar.style.display = "none";
+        } else {
+          sidebar.style.display = "block";
+        }
       }
     }
   </script>
@@ -112,7 +114,5 @@
     <p>유니보드 위키에 오신 것을 환영합니다!</p>
     <a href="https://newattea.github.io"></a>
   </div>
-
-  <whale-quicksearch translate="no"></whale-quicksearch>
 </body>
 </html>
