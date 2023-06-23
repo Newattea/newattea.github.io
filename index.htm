@@ -35,7 +35,6 @@
       float: left;
       padding: 20px;
       border-radius: 10px;
-      display: none;
     }
 
     /* 문서 내용 스타일링 */
@@ -54,10 +53,14 @@
         width: 100%;
         float: none;
         padding: 10px;
+        display: none;
       }
       .content {
         margin-left: 10px;
         margin-right: 10px;
+      }
+      .toggle-button {
+        display: block;
       }
     }
 
@@ -86,7 +89,7 @@
     <a href="https://raw.githubusercontent.com/Newattea/newattea.github.io/main/index.htm">원본 보기</a>
   </div>
 
-  <div class="sidebar">
+  <div class="sidebar" id="sidebar">
     <!-- 사이드바 내용 -->
     <h3>둘러보기</h3>
     <p><a href="https://newattea.github.io">대문</a></p>
@@ -101,20 +104,7 @@
     <!-- 문서 내용 -->
     <h1>대문</h1>
     <p>유니보드 위키에 오신 것을 환영합니다!</p>
+    <button class="toggle-button" onclick="toggleSidebar()">사이드바 표시</button>
   </div>
-
-  <script>
-    if (window.innerWidth <= 600) {
-      var sidebar = document.getElementById("sidebar");
-      sidebar.style.display = "none";
-
-      var toggleButton = document.createElement("button");
-      toggleButton.className = "show-sidebar";
-      toggleButton.textContent = "사이드바 표시";
-      toggleButton.addEventListener("click", toggleSidebar);
-      document.body.appendChild(toggleButton);
-    }
-  </script>
-
 </body>
 </html>
