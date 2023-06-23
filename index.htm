@@ -59,11 +59,6 @@
         margin-left: 10px;
         margin-right: 10px;
       }
-      .show-sidebar {
-        display: block;
-        text-align: center;
-        margin-bottom: 10px;
-      }
     }
 
     a {
@@ -106,10 +101,20 @@
     <!-- 문서 내용 -->
     <h1>대문</h1>
     <p>유니보드 위키에 오신 것을 환영합니다!</p>
-    <a href="https://newattea.github.io"></a>
   </div>
 
-  <button class="show-sidebar" onclick="toggleSidebar()">사이드바 표시</button>
+  <script>
+    if (window.innerWidth <= 600) {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.style.display = "none";
+
+      var toggleButton = document.createElement("button");
+      toggleButton.className = "show-sidebar";
+      toggleButton.textContent = "사이드바 표시";
+      toggleButton.addEventListener("click", toggleSidebar);
+      document.body.appendChild(toggleButton);
+    }
+  </script>
 
 </body>
 </html>
