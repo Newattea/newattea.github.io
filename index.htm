@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+<head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>유니보드위키</title>
   <link rel="icon" href="https://static.miraheze.org/ootchampediawiki/e/e3/Unib-Favicon.ico">
   <style>
@@ -45,6 +47,19 @@
       margin-right: 20px;
     }
     
+    /* 모바일 스타일링 */
+    @media only screen and (max-width: 600px) {
+      .sidebar {
+        width: 100%;
+        float: none;
+        padding: 10px;
+      }
+      .content {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+
     a {
       text-decoration-line: none;
     }
@@ -83,5 +98,5 @@
   </div>
 
 
-<whale-quicksearch translate="no"></whale-quicksearch>
-</body><whale-quicksearch translate="no"></whale-quicksearch></html>
+</body>
+</html>
