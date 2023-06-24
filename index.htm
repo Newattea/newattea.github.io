@@ -12,8 +12,7 @@
       margin: 0;
       padding: 0;
       color: #4F4F4F;
-      display: flex; /* 추가 */
-      flex-direction: column; /* 추가 */
+      position: relative; /* 추가 */
     }
 
     /* 링크 스타일링 */
@@ -48,6 +47,9 @@
       width: 20%;
       padding: 20px;
       border-radius: 10px;
+      position: absolute; /* 추가 */
+      left: 0; /* 추가 */
+      top: 0; /* 추가 */
     }
 
     /* 문서 내용 스타일링 */
@@ -56,8 +58,8 @@
       border: 1px solid #ccc;
       border-radius: 10px;
       padding: 20px;
-      flex: 1; /* 추가 */
-      margin: 20px; /* 추가 */
+      margin-left: 25%;
+      margin-right: 20px;
     }
 
     /* 모바일에서만 보이는 버튼 스타일링 */
